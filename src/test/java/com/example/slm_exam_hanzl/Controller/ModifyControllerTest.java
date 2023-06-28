@@ -16,4 +16,16 @@ class ModifyControllerTest {
         // Assert
         assertEquals(result, "hElLo");
     }
+
+    @Test
+    void testStringLength(){
+        // Arrange
+        ModifyController mc = new ModifyController();
+
+        // Act
+        int result = mc.checkStringLength("world");
+
+        // Assert
+        assertEquals(result, 5);
+    }
 }

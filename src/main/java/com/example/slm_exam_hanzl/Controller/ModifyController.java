@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class ModifyController {
 
-    private String lastString;
+    private String lastString = "";
 
     @RequestMapping("/api/modify")
     public String modifyString(
@@ -23,5 +23,10 @@ public class ModifyController {
         }
         lastString = r;
         return r;
+    }
+
+    @RequestMapping("/api/modify/length")
+    public int checkStringLength(String lastString){
+        return lastString.length();
     }
 }
