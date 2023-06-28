@@ -13,6 +13,7 @@ public class ModifyController {
     public String modifyString(
             @RequestParam String string
     ){
+        // codeblock taken from URL: https://stackoverflow.com/questions/28933885/how-to-capitalize-every-other-letter-in-a-string-efficiently-in-java
         String r = "";
         for (int i = 0; i < string.length(); i++) {
             if (i % 2 == 0) {
